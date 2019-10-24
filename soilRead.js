@@ -8,8 +8,20 @@ function soilReading() {
 
 function map_(reading: number) {
     //255 per step
-    return pins.map(reading, 0, 1023, 1, 5);
+    return pins.map(reading, 0, 1023, 0, 5);
 }
+
+
+function output(unformatted: number) {
+    if (unformatted > 0 && unformatted < 1) { unformatted = 0 };
+    if (unformatted > 1 && unformatted < 2) { unformatted = 1 };
+    if (unformatted > 2 && unformatted < 3) { unformatted = 2 };
+    if (unformatted > 3 && unformatted < 4) { unformatted = 3 };
+    if (unformatted > 4 && unformatted < 5) { unformatted = 4 };
+    //console.log("" + unformatted);
+    basic.showNumber(unformatted)
+}
+
 
 basic.forever(function () {
     output(map_(soilReading()))
