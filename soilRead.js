@@ -5,3 +5,11 @@ function soilReading() {
     pins.digitalWritePin(DigitalPin.P6, 0)
     return soil
 }
+
+
+
+function map_(reading: number) {
+    //255 per step
+    return pins.map(reading, 0, 1023, 1, 5);
+}
+
