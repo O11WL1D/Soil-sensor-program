@@ -1,8 +1,10 @@
 function soilReading() {
+    led.enable(false)
     pins.digitalWritePin(DigitalPin.P6, 1)
     basic.pause(50)
     let soil = pins.analogReadPin(AnalogPin.P7)
     pins.digitalWritePin(DigitalPin.P6, 0)
+    led.enable(true)
     return soil
 }
 
