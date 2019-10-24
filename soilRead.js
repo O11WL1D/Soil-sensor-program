@@ -23,6 +23,5 @@ function output(unformatted: number) {
 }
 
 
-basic.forever(function () {
-    output(map_(soilReading()))
-})
+for(;;){output(map_(soilReading()))}
+
