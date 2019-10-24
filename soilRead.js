@@ -6,10 +6,11 @@ function soilReading() {
     return soil
 }
 
-
-
 function map_(reading: number) {
     //255 per step
     return pins.map(reading, 0, 1023, 1, 5);
 }
 
+basic.forever(function () {
+    output(map_(soilReading()))
+})
