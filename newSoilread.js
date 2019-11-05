@@ -42,6 +42,8 @@ function toggleRows(upperLimit: number) {
     //function for toggling matrix based on mapping
 }
 
+//completed by Muajeh Lee and Gavin Unrue
+
 basic.forever(function () {
     output(map_(soilReading()))
 })
