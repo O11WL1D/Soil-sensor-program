@@ -54,7 +54,7 @@ function autoCalibrate() {
     //shows that it will record lowerValue when A is pressed
     if (calibrationCounter == 1 || calibrationCounter == 5 || calibrationCounter == 9) {
         pins.digitalWritePin(DigitalPin.P8, 1)
-        lowerValue += pins.analogReadPin(AnalogPin.P12)
+        lowerValue += pins.analogReadPin(AnalogPin.P0)
         pins.digitalWritePin(DigitalPin.P8, 0)
         calibrationCounter++
     }
@@ -65,7 +65,7 @@ function autoCalibrate() {
     //shows that it will record upperValue when A is pressed
     if (calibrationCounter == 3 || calibrationCounter == 7 || calibrationCounter == 11) {
         pins.digitalWritePin(DigitalPin.P8, 1)
-        upperValue += pins.analogReadPin(AnalogPin.P12)
+        upperValue += pins.analogReadPin(AnalogPin.P0)
         pins.digitalWritePin(DigitalPin.P8, 0)
         calibrationCounter++
     }
