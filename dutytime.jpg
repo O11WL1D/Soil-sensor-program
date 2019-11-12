@@ -1,0 +1,5 @@
+Fall < 250.0 us
+freq = 50.0hz
+width = 18.60 ms
++duty = 7.000% // time spent on
+-duty = 93.000% // time spent off
