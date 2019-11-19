@@ -1,0 +1,15 @@
+at pins.servoWritePin(AnalogPin.P0, 100)
++duty = 8.250%
+width = 1.650 ms
+at pins.servoWritePin(AnalogPin.P0, 0)
++duty = 2.5%
+width = 500 us
+at pins.servoWritePin(AnalogPin.P0, -100)
++duty = 2.5%
+width = 500 us
+max +duty = 12.5%
+width = 2.5 ms
+
+appears to interpret all values under 0 as being 0 so the +duty does not change
+the faster the written number changes the faster the +duty changes
+the +duty does not change until the written number is non negative
